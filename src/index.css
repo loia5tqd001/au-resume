@@ -32,7 +32,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .left {
   grid-area: left;
-  margin-left: 3.2rem;
+  margin-left: 1.6rem;
 }
 
 .right {
@@ -81,6 +81,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: normal !important;
   font-size: 2.4rem !important;
   margin-top: 0.8rem !important;
+  margin-bottom: -0.8rem !important;
 }
 
 .anticon {
@@ -92,7 +93,12 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: 0.3rem solid var(--primary);
   display: inline-block;
   margin-bottom: 6.4rem;
+  margin-top: 0.8rem !important;
   font-size: 2.4rem;
+}
+
+.left .title {
+  margin-top: 3.2rem !important;
 }
 
 .contact-info {
