@@ -170,18 +170,19 @@ T.C.Au
 function App() {
   return (
     <div className='container'>
-      <div className='top'>
-        <div className='avatar'>
-          <img src={avatar} alt='' width='108px' height='108px' />
-        </div>
-        <Typography.Title className='name'>
-          <small>Mr.</small> Au Tai Chik (Joseph)
-        </Typography.Title>
-        <Typography.Title level={2} className='wanted-position'>
-          Resident Engineer
-        </Typography.Title>
-      </div>
       <div className='left'>
+        <div className='top'>
+          <div className='avatar'>
+            <img src={avatar} alt='' width='164px' height='164px' />
+          </div>
+          <Typography.Title className='name'>
+            <small>Mr. </small>
+            Au Tai Chik (Joseph)
+          </Typography.Title>
+          <Typography.Title level={2} className='wanted-position'>
+            Resident Engineer
+          </Typography.Title>
+        </div>
         <Typography.Title level={2} className='title'>
           <ContactsTwoTone />
           Contact Info
