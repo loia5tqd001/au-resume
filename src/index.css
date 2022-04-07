@@ -19,8 +19,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .container {
   display: grid;
-  grid-template-columns: 1fr 36rem;
-  grid-template-areas: "right left" "bottom bottom";
+  grid-template-columns: 30rem 1fr;
+  grid-template-areas: "left right" "bottom bottom";
   max-width: 102.4rem;
   margin: 3.2rem auto;
   gap: 1.6rem 3.2rem;
@@ -32,11 +32,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .left {
   grid-area: left;
-  margin-left: 1.6rem;
 }
 
 .right {
   grid-area: right;
+  margin-left: -3.2rem;
 }
 
 .bottom {
@@ -151,4 +151,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .bottom .time {
   text-align: right;
+}
+
+.ant-timeline-item {
+  padding-bottom: 0 !important;
+}
+
+.ant-timeline-item-content {
+  padding-top: 15px;
 }

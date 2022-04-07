@@ -23,17 +23,24 @@ function PersonalInfoItem(props) {
 const employmentHistory = [
   {
     timeUntil: 'Present',
+    company: 'Meinhardt Singapore Pte Ltd',
+    position: 'Resident Engineer',
+    projectDesc:
+      'Proposed Additional & Alteration To Existing 2 Blocks Of 7-Storey Light Industrial Building With Basement Carpark On TS17 LOT 01616X At 70 & 72 Bendemeer Road (Kallang Planning Area)',
+  },
+  {
+    timeUntil: 'March 2020',
     company: 'TWA Consultant Pte Ltd',
     position: 'Resident Engineer',
     projectDesc:
-      'Proposed Erection of  3 Blocks of 5 Storey with Attic Residential flats development (70 units) with a swimming pool, communal facilities and basement carpark at 35 Gilstead Road',
+      'Proposed Erection of 3 Blocks of 5 Storey with Attic Residential flats development (70 units) with a swimming pool, communal facilities and basement carpark at 35 Gilstead Road',
   },
   {
     timeUntil: 'Nov 2018',
     company: 'CPG Consultantts PTE LTD',
     position: 'Resident Engineer',
     projectDesc:
-      'Proposed  Erection of  New Singapore Boys’ Complex Consisting of  7 Blocks of Institution Buildings and Ancilliary Buildings at Jalan Bahar',
+      'Proposed Erection of New Singapore Boys’ Complex Consisting of 7 Blocks of Institution Buildings and Ancilliary Buildings at Jalan Bahar',
   },
   {
     timeUntil: 'Sept 2016',
@@ -47,52 +54,52 @@ const employmentHistory = [
     company: 'Beca Carter Pte Ltd ',
     position: 'Resident Engineer',
     projectDesc:
-      'Proposed erection of  2-Block of  30 sty Commercial Buildings & 2-Block of  34 sty Residential Buildings at Marina Way',
+      'Proposed erection of 2-Block of 30 sty Commercial Buildings & 2-Block of 34 sty Residential Buildings at Marina Way',
   },
   {
     timeUntil: 'July 2014',
     company: 'Mega Consult Pte Ltd',
     position: 'Resident Engineer',
     projectDesc:
-      'Proposed Additions & Alterations to existing Basement 1 & 2 , 1st to  6th sty  and Roof  Plan of  the East Point Mall at Simei St  6',
+      'Proposed Additions & Alterations to existing Basement 1 & 2, 1st to 6th sty and Roof Plan of the East Point Mall at Simei St 6',
   },
   {
     timeUntil: 'June 2013',
     company: 'TID Pte Ltd',
     position: 'Resident Engineer',
     projectDesc:
-      'Proposed  high end Condominium Housing Development Comprising of  1 Block of 24-sty ( 65 units ) with  basement  carpark  and communal facilities  at Nathan Road',
+      'Proposed high end Condominium Housing Development Comprising of 1 Block of 24-sty (65 units) with  basement carpark and communal facilities at Nathan Road',
   },
   {
     timeUntil: 'March 2011',
     company: 'LEE & LEE Consultants Pte Ltd',
     position: 'Resident Engineer',
-    projectDesc: 'Terminal 1 upgrading  project at  Changi  Airport.',
+    projectDesc: 'Terminal 1 upgrading project at Changi Airport.',
   },
   {
     timeUntil: 'Jan 2010',
     company: 'PRPL Pte Ltd',
     position: 'Resident Engineer',
     projectDesc:
-      'Proposed  Erection of  4 storey Industrial Development at  Tuas Bay Drive Avenue 4 for Pacific Refreshments Pte Ltd.',
+      'Proposed Erection of 4 storey Industrial Development at Tuas Bay Drive Avenue 4 for Pacific Refreshments Pte Ltd.',
   },
   {
     timeUntil: 'Nov 2008',
     company: 'Jack Investment Pte Ltd',
     position: 'Resident Engineer',
     projectDesc:
-      'Proposed New erection of 10 storey Entertainment Development  comprising of commercial/multi storey carpark & single level overhead  linkbridge at Victoria St  ( Iluma Shopping Centre )',
+      'Proposed New erection of 10 storey Entertainment Development  comprising of commercial/multi storey carpark & single level overhead linkbridge at Victoria St (Iluma Shopping Centre)',
   },
   {
-    timeUntil: 'April 2006 ',
-    company: 'Grocery Logistics of Singapore Pte Ltd ',
+    timeUntil: 'April 2006',
+    company: 'Grocery Logistics of Singapore Pte Ltd',
     position: 'Resident Engineer',
     projectDesc:
       'Proposed New Extension with Alterations & Additions to existing single-storey Grocery warehouse with 3-storey Ancillary office at 37 Joo Koon Circle',
   },
   {
-    timeUntil: 'Sept 2004 ',
-    company: 'Tiong Seng Contractors Pte Ltd ',
+    timeUntil: 'Sept 2004',
+    company: 'Tiong Seng Contractors Pte Ltd',
     position: 'Resident Engineer',
     projectDesc:
       'Proposed Erection of 5 Block of 18-storey Park Green Executive Condominium with Two  Basements  Carpark @ Sengkang',
@@ -102,45 +109,46 @@ const employmentHistory = [
     company: 'Euro-Asia Realty',
     position: 'Resident Engineer',
     projectDesc:
-      '30-storey Condominium Development with   one Basement Carpark@ Thompson Road',
+      '30-storey Condominium Development with one Basement Carpark@ Thompson Road',
   },
   {
     timeUntil: 'Feb 2001 ',
     company: 'Kim Seng Heng Engineering Construction',
     position: 'Senior Project Engineer',
-    projectDesc: `a)	HDB BPN6C4 at Bukit Panjang
-( Jul 98 – Dec 99 )
-b)	18-storey Condominium Development at Craig Road ( Jan 2000 – Feb 2001 )
-`,
+    projectDesc: `• HDB BPN6C4 at Bukit Panjang (Jul 98 – Dec 99)
+• 18-storey Condominium Development at Craig Road (Jan 2000 – Feb 2001)`,
   },
   {
     timeUntil: 'Jun 1998 ',
     company: 'Joint-Tech Construction ',
     position: 'Senior Project Engineer & Project Manager',
-    projectDesc: `a)	Batch 3 Ederly Upgrading Project 
-( Main sub-contractor of Ho Lee Construction )
-b)	66 Grange Road Condominium Development ( Main sub-contractor of TPS Construction)
-`,
+    projectDesc: `• Batch 3 Ederly Upgrading Project (Main sub-contractor of Ho Lee Construction)
+• 66 Grange Road Condominium Development (Main sub-contractor of TPS Construction)`,
   },
   {
-    timeUntil: 'Jan 1998   ',
+    timeUntil: 'Jan 1998',
     company: 'Right Construction ',
     position: 'Project Engineer & Project Manager',
-    projectDesc: `a)	HDB N6C11 at Woodlands  ( July 95 – Oct 96 )
-b)	8-sty of industrial flatted factory at Tannery Lane with one Basement Car Park ( Oct 96 – Jan 98 )
-`,
+    projectDesc: `• HDB N6C11 at Woodlands (July 95 – Oct 96)
+• 8-sty of industrial flatted factory at Tannery Lane with one Basement Car Park (Oct 96 – Jan 98)`,
   },
   {
-    timeUntil: 'Aug 92 ',
+    timeUntil: 'July 1995',
+  },
+  {
+    timeUntil: 'Aug 1992',
     company: 'Nakano SG ',
     position: 'Site Supervisor',
     projectDesc: `Casa Meyfort Condominium`,
   },
   {
-    timeUntil: 'Nov 1991 \nOct 1990 ',
+    timeUntil: 'Nov 1991',
     company: 'Lum Chang Construction ',
     position: 'Site Supervisor',
     projectDesc: `Trevose Park Condominium`,
+  },
+  {
+    timeUntil: 'Oct 1990',
   },
 ];
 
@@ -177,48 +185,50 @@ function App() {
           </div>
           <Typography.Title className='name'>
             <small>Mr. </small>
-            Au Tai Chik (Joseph)
+            Au Tai Chik <br />
+            <i>(Joseph)</i>
           </Typography.Title>
           <Typography.Title level={2} className='wanted-position'>
             Resident Engineer
           </Typography.Title>
         </div>
-        <Typography.Title level={2} className='title'>
-          <ContactsTwoTone />
-          Contact Info
-        </Typography.Title>
-        <div className='contact-info'>
-          <PhoneOutlined /> 66335627 - 97869443
+        <div className='left-info'>
+          <Typography.Title level={2} className='title'>
+            <ContactsTwoTone />
+            Contact Info
+          </Typography.Title>
+          <div className='contact-info'>
+            <PhoneOutlined /> 97869443
+          </div>
+          <div className='contact-info'>
+            <MailOutlined /> josephau2005@yahoo.com.sg
+          </div>
+          <div className='contact-info'>
+            <EnvironmentOutlined /> Blk 467A, Admiralty Drive, #07-167,
+            Singapore 751467
+          </div>
+          <Typography.Title level={2} className='title'>
+            <IdcardTwoTone />
+            Personal Info
+          </Typography.Title>
+          <PersonalInfoItem label='Date of Birth' value='15 February 1969' />
+          <PersonalInfoItem label='Marital Status' value='Married' />
+          <PersonalInfoItem
+            label='Nationality'
+            value='Malaysian (Singapore PR)'
+          />
+          <PersonalInfoItem
+            label='Education'
+            value='B.Eng.(Hons) in Civil & Structural Engineering (University of Aberdeen, UK)'
+          />
+          <PersonalInfoItem label='Driving License' value='Class 3' />
+          <PersonalInfoItem
+            label='Language'
+            value='Speak/write English, Chinese and Malay'
+          />
+          <PersonalInfoItem label='Availability' value='1 Oct 2022' />
+          <PersonalInfoItem label='Expected Salary' value='Infinity' />
         </div>
-        <div className='contact-info'>
-          <MailOutlined /> josephau2005@yahoo.com.sg
-        </div>
-        <div className='contact-info'>
-          <EnvironmentOutlined /> Blk 467A, Admiralty Drive, #07-167, Singapore
-          751467
-        </div>
-        <Typography.Title level={2} className='title'>
-          <IdcardTwoTone />
-          Personal Info
-        </Typography.Title>
-        <PersonalInfoItem label='Date of Birth' value='15 February 1969' />
-        <PersonalInfoItem label='Marital Status' value='Married' />
-        <PersonalInfoItem
-          label='Nationality'
-          value='Malaysian (Singapore PR)'
-        />
-
-        <PersonalInfoItem
-          label='Education'
-          value='B.Eng.(Hons) in Civil & Structural Engineering (University of Aberdeen, UK)'
-        />
-        <PersonalInfoItem label='Driving License' value='Class 3' />
-        <PersonalInfoItem
-          label='Language'
-          value='Speak/write English, Chinese and Malay'
-        />
-        <PersonalInfoItem label='Availability' value='1 Oct 2022' />
-        <PersonalInfoItem label='Expected Salary' value='Infinity' />
       </div>
       <div className='right'>
         <Typography.Title level={2} className='title'>
@@ -229,10 +239,14 @@ function App() {
           {employmentHistory.map((it) => (
             <Timeline.Item label={it.timeUntil}>
               <div>
-                <Typography.Title level={5}>
-                  {it.company} — {it.position}
-                </Typography.Title>
-                <Typography.Text>{it.projectDesc}</Typography.Text>
+                {it.company || it.position ? (
+                  <Typography.Title level={5}>
+                    {it.company} — {it.position}
+                  </Typography.Title>
+                ) : null}
+                <Typography.Text style={{ whiteSpace: 'pre-wrap' }}>
+                  {it.projectDesc}
+                </Typography.Text>
               </div>
             </Timeline.Item>
           ))}
