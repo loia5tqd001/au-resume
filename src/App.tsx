@@ -11,7 +11,12 @@ import { Form, Input, Timeline, Typography } from 'antd';
 import React from 'react';
 import avatar from './avatar.jpg';
 
-function PersonalInfoItem(props) {
+type PersonalInfoItemProps = {
+  label: React.ReactNode;
+  value: React.ReactNode;
+};
+
+function PersonalInfoItem(props: PersonalInfoItemProps) {
   const { label, value } = props;
   return (
     <div style={{ marginTop: 16 }}>
