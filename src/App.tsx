@@ -6,8 +6,7 @@ import {
   PhoneOutlined,
   ReconciliationTwoTone,
 } from '@ant-design/icons';
-import { Descriptions, Timeline, Typography } from 'antd';
-import { useState } from 'react';
+import { Timeline, Typography } from 'antd';
 import avatar from './avatar.jpg';
 
 function PersonalInfoItem(props) {
@@ -29,7 +28,7 @@ const employmentHistory = [
       'Proposed Additional & Alteration To Existing 2 Blocks Of 7-Storey Light Industrial Building With Basement Carpark On TS17 LOT 01616X At 70 & 72 Bendemeer Road (Kallang Planning Area)',
   },
   {
-    timeUntil: 'March 2020',
+    timeUntil: 'April 2020',
     company: 'TWA Consultant Pte Ltd',
     position: 'Resident Engineer',
     projectDesc:
@@ -130,13 +129,10 @@ const employmentHistory = [
     company: 'Right Construction ',
     position: 'Project Engineer & Project Manager',
     projectDesc: `• HDB N6C11 at Woodlands (July 95 – Oct 96)
-• 8-sty of industrial flatted factory at Tannery Lane with one Basement Car Park (Oct 96 – Jan 98)`,
+• 8-storey of industrial flatted factory at Tannery Lane with one Basement Car Park (Oct 96 – Jan 98)`,
   },
   {
-    timeUntil: 'July 1995',
-  },
-  {
-    timeUntil: 'Aug 1992',
+    timeUntil: 'Feb 1993',
     company: 'Nakano SG ',
     position: 'Site Supervisor',
     projectDesc: `Casa Meyfort Condominium`,
