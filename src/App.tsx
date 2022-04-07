@@ -192,7 +192,7 @@ function App() {
 
   React.useEffect(() => {
     document.onkeydown = (event) => {
-      if (event.key === 'a') {
+      if (event.key === 'Escape') {
         setIsVisible((prev) => !prev);
       }
     };
