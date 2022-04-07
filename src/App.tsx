@@ -1,4 +1,5 @@
 import {
+  CloseOutlined,
   ContactsTwoTone,
   EnvironmentOutlined,
   IdcardTwoTone,
@@ -6,7 +7,8 @@ import {
   PhoneOutlined,
   ReconciliationTwoTone,
 } from '@ant-design/icons';
-import { Timeline, Typography } from 'antd';
+import { Form, Input, Timeline, Typography } from 'antd';
+import React from 'react';
 import avatar from './avatar.jpg';
 
 function PersonalInfoItem(props) {
@@ -171,91 +173,134 @@ T.C.Au
 `,
 };
 
+type FormType = {
+  expected_salary: string;
+  availablitiy: string;
+  cover_letter_time: string;
+};
+
 function App() {
+  const [expectedSalary, set_expectedSalary] = React.useState('Infinity');
+  const [availablitiy, set_availablitiy] = React.useState('1 Oct 2022');
+  const [coverLetterTime, set_coverLetterTime] = React.useState('6 Feb 2019');
+  const [isVisible, setIsVisible] = React.useState(true);
+
+  React.useEffect(() => {
+    document.onkeydown = (event) => {
+      if (event.key === 'a') {
+        setIsVisible((prev) => !prev);
+      }
+    };
+  }, []);
+
   return (
-    <div className='container'>
-      <div className='left'>
-        <div className='top'>
-          <div className='avatar'>
-            <img src={avatar} alt='' width='164px' height='164px' />
+    <div>
+      <Form<FormType>
+        initialValues={{
+          expected_salary: expectedSalary,
+          availablitiy: availablitiy,
+          cover_letter_time: coverLetterTime,
+        }}
+        className='form'
+        style={{ display: isVisible ? undefined : 'none' }}
+      >
+        <Form.Item className='close'>
+          <CloseOutlined onClick={() => setIsVisible(false)} />
+        </Form.Item>
+        <Form.Item name='expected_salary' label='Expected Salary'>
+          <Input onChange={(e) => set_expectedSalary(e.target.value)} />
+        </Form.Item>
+        <Form.Item name='availablitiy' label='Availability'>
+          <Input onChange={(e) => set_availablitiy(e.target.value)} />
+        </Form.Item>
+        <Form.Item name='cover_letter_time' label='Cover Letter Time'>
+          <Input onChange={(e) => set_coverLetterTime(e.target.value)} />
+        </Form.Item>
+      </Form>
+      <div className='container'>
+        <div className='left'>
+          <div className='top'>
+            <div className='avatar'>
+              <img src={avatar} alt='' width='164px' height='164px' />
+            </div>
+            <Typography.Title className='name'>
+              <small>Mr. </small>
+              Au Tai Chik <br />
+              <i>(Joseph)</i>
+            </Typography.Title>
+            <Typography.Title level={2} className='wanted-position'>
+              Resident Engineer
+            </Typography.Title>
           </div>
-          <Typography.Title className='name'>
-            <small>Mr. </small>
-            Au Tai Chik <br />
-            <i>(Joseph)</i>
-          </Typography.Title>
-          <Typography.Title level={2} className='wanted-position'>
-            Resident Engineer
-          </Typography.Title>
+          <div className='left-info'>
+            <Typography.Title level={2} className='title'>
+              <ContactsTwoTone />
+              Contact Info
+            </Typography.Title>
+            <div className='contact-info'>
+              <PhoneOutlined /> 97869443
+            </div>
+            <div className='contact-info'>
+              <MailOutlined /> josephau2005@yahoo.com.sg
+            </div>
+            <div className='contact-info'>
+              <EnvironmentOutlined /> Blk 467A, Admiralty Drive, #07-167,
+              Singapore 751467
+            </div>
+            <Typography.Title level={2} className='title'>
+              <IdcardTwoTone />
+              Personal Info
+            </Typography.Title>
+            <PersonalInfoItem label='Date of Birth' value='15 February 1969' />
+            <PersonalInfoItem label='Marital Status' value='Married' />
+            <PersonalInfoItem
+              label='Nationality'
+              value='Malaysian (Singapore PR)'
+            />
+            <PersonalInfoItem
+              label='Education'
+              value='B.Eng.(Hons) in Civil & Structural Engineering (University of Aberdeen, UK)'
+            />
+            <PersonalInfoItem label='Driving License' value='Class 3' />
+            <PersonalInfoItem
+              label='Language'
+              value='Speak/write English, Chinese and Malay'
+            />
+            <PersonalInfoItem label='Availability' value={availablitiy} />
+            <PersonalInfoItem label='Expected Salary' value={expectedSalary} />
+          </div>
         </div>
-        <div className='left-info'>
+        <div className='right'>
           <Typography.Title level={2} className='title'>
-            <ContactsTwoTone />
-            Contact Info
+            <ReconciliationTwoTone />
+            Employment History
           </Typography.Title>
-          <div className='contact-info'>
-            <PhoneOutlined /> 97869443
-          </div>
-          <div className='contact-info'>
-            <MailOutlined /> josephau2005@yahoo.com.sg
-          </div>
-          <div className='contact-info'>
-            <EnvironmentOutlined /> Blk 467A, Admiralty Drive, #07-167,
-            Singapore 751467
-          </div>
-          <Typography.Title level={2} className='title'>
-            <IdcardTwoTone />
-            Personal Info
-          </Typography.Title>
-          <PersonalInfoItem label='Date of Birth' value='15 February 1969' />
-          <PersonalInfoItem label='Marital Status' value='Married' />
-          <PersonalInfoItem
-            label='Nationality'
-            value='Malaysian (Singapore PR)'
-          />
-          <PersonalInfoItem
-            label='Education'
-            value='B.Eng.(Hons) in Civil & Structural Engineering (University of Aberdeen, UK)'
-          />
-          <PersonalInfoItem label='Driving License' value='Class 3' />
-          <PersonalInfoItem
-            label='Language'
-            value='Speak/write English, Chinese and Malay'
-          />
-          <PersonalInfoItem label='Availability' value='1 Oct 2022' />
-          <PersonalInfoItem label='Expected Salary' value='Infinity' />
+          <Timeline mode='left'>
+            {employmentHistory.map((it) => (
+              <Timeline.Item label={it.timeUntil} key={it.timeUntil}>
+                <div>
+                  {it.company || it.position ? (
+                    <Typography.Title level={5}>
+                      {it.company} — {it.position}
+                    </Typography.Title>
+                  ) : null}
+                  <Typography.Text style={{ whiteSpace: 'pre-wrap' }}>
+                    {it.projectDesc}
+                  </Typography.Text>
+                </div>
+              </Timeline.Item>
+            ))}
+          </Timeline>
         </div>
-      </div>
-      <div className='right'>
-        <Typography.Title level={2} className='title'>
-          <ReconciliationTwoTone />
-          Employment History
-        </Typography.Title>
-        <Timeline mode='left'>
-          {employmentHistory.map((it) => (
-            <Timeline.Item label={it.timeUntil}>
-              <div>
-                {it.company || it.position ? (
-                  <Typography.Title level={5}>
-                    {it.company} — {it.position}
-                  </Typography.Title>
-                ) : null}
-                <Typography.Text style={{ whiteSpace: 'pre-wrap' }}>
-                  {it.projectDesc}
-                </Typography.Text>
-              </div>
-            </Timeline.Item>
-          ))}
-        </Timeline>
-      </div>
-      <div className='bottom'>
-        <Typography.Title level={5} className='time'>
-          {coverLetter.time}
-        </Typography.Title>
-        <Typography.Title level={3} className='title'>
-          {coverLetter.title}
-        </Typography.Title>
-        <Typography.Text>{coverLetter.content}</Typography.Text>
+        <div className='bottom'>
+          <Typography.Title level={5} className='time'>
+            {coverLetterTime}
+          </Typography.Title>
+          <Typography.Title level={3} className='title'>
+            {coverLetter.title}
+          </Typography.Title>
+          <Typography.Text>{coverLetter.content}</Typography.Text>
+        </div>
       </div>
     </div>
   );
