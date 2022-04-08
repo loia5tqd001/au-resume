@@ -41,6 +41,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .bottom {
   grid-area: bottom;
+
+  max-width: 102.4rem;
+  margin: 0 auto;
 }
 
 /* Top */
@@ -189,4 +192,8 @@ h1, h2, h3, h4, h5, h6 {
   .form {
     display: none;
   }
+}
+
+@media print {
+  .pagebreak { page-break-before: auto; } /* page-break-after works, as well */
 }

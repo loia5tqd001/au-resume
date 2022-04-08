@@ -169,10 +169,12 @@ As a Resident Engineer representing consultants and developers, I am heavily inv
 I hope that with my past experiences with various contractors and developers, my positive attitude and educational background, I could make a valuable contribution to your organization. I would be grateful if I could have the opportunity to discuss my credentials and remuneration in detail personally at the time of interview at your convenience.
 
 I look forward to your favorable reply.
+
+
 Thanks.
 
-Yours faithfully
 
+Yours faithfully
 
 T.C.Au
 `,
@@ -297,15 +299,16 @@ function App() {
             ))}
           </Timeline>
         </div>
-        <div className='bottom'>
-          <Typography.Title level={5} className='time'>
-            {coverLetterTime}
-          </Typography.Title>
-          <Typography.Title level={3} className='title'>
-            {coverLetter.title}
-          </Typography.Title>
-          <Typography.Text>{coverLetter.content}</Typography.Text>
-        </div>
+      </div>
+      <div className='pagebreak'></div>
+      <div className='bottom'>
+        <Typography.Title level={5} className='time'>
+          {coverLetterTime}
+        </Typography.Title>
+        <Typography.Title level={3} className='title'>
+          {coverLetter.title}
+        </Typography.Title>
+        <Typography.Text>{coverLetter.content}</Typography.Text>
       </div>
     </div>
   );
