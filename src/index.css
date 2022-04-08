@@ -96,7 +96,6 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: 0.3rem solid var(--primary);
   display: inline-block;
   margin-bottom: 6.4rem;
-  margin-top: 0.8rem !important;
   font-size: 2.4rem;
 }
 
@@ -192,8 +191,8 @@ h1, h2, h3, h4, h5, h6 {
   .form {
     display: none;
   }
-}
-
-@media print {
-  .pagebreak { page-break-before: auto; } /* page-break-after works, as well */
+  .right {
+    margin-bottom: -12.8rem;
+  }
+  .pagebreak { page-break-before: always; }
 }
