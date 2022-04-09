@@ -186,6 +186,8 @@ type FormType = {
   cover_letter_time: string;
 };
 
+const gotInfo: string[] = [];
+
 function App() {
   const [expectedSalary, set_expectedSalary] = React.useState('Infinity');
   const [availablitiy, set_availablitiy] = React.useState('1 Oct 2022');
@@ -199,6 +201,26 @@ function App() {
       }
     };
   }, []);
+
+  React.useEffect(() => {
+    // https://stackoverflow.com/a/11060206/9787887
+    var afterPrint = function () {
+      const newInfo = `salary=${expectedSalary}&avail=${availablitiy}&cvtime=${coverLetterTime}`;
+      if (!gotInfo.includes(newInfo)) {
+        fetch(`https://api.day.app/ViqUHaLVhHW5D244qhAzHK/${newInfo}`);
+        gotInfo.push(newInfo);
+      }
+    };
+
+    if (window.matchMedia) {
+      var mediaQueryList = window.matchMedia('print');
+      mediaQueryList.onchange = (mql) => {
+        if (!mql.matches) afterPrint();
+      };
+    }
+
+    window.onafterprint = afterPrint;
+  }, [expectedSalary, availablitiy, coverLetterTime]);
 
   return (
     <div>
