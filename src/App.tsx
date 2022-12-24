@@ -267,7 +267,7 @@ function App() {
               Contact Info
             </Typography.Title>
             <div className='contact-info'>
-              <PhoneOutlined /> 97869443
+              <PhoneOutlined /> 97869443 via Whatsapp
             </div>
             <div className='contact-info'>
               <MailOutlined /> josephau2005@yahoo.com.sg
