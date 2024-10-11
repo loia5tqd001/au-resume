@@ -29,6 +29,13 @@ function PersonalInfoItem(props: PersonalInfoItemProps) {
 const employmentHistory = [
   {
     timeUntil: 'Present',
+    company: 'Ramboll Singapore Pte Ltd (formerly WEB Structure)',
+    position: 'Resident Engineer',
+    projectDesc:
+      'Proposed Erection of a 7-Storey Commercial/Institution with shops at 1st Storey, Institution at 2nd and 7th Storeys, Commercial at 3rd, 4th, 5th and 6th Storeys and 25 Carpark lots at Basement 1 on lot 07667A Mk25 at 1-21 Lorong 18 Geylang (Geylang Planning Area)',
+  },
+  {
+    timeUntil: 'Jan 2023',
     company: 'Meinhardt Singapore Pte Ltd',
     position: 'Resident Engineer',
     projectDesc:
@@ -158,7 +165,7 @@ const employmentHistory = [
 const coverLetter = {
   title: 'RE: APPLICATION FOR THE POST OF RESIDENT ENGINEER',
   time: '6 Feb 2019',
-  content: `Please find attached herewith is my resume stating my qualifications and the employment history for your reference. I am currently working as the RE for the Proposed Major A&A to existing 2 Blocks of 7-Storey Multi-User Light Industrial Commercial Building with Basement Car Park at Bendemeer Road.
+  content: `Please find attached herewith is my resume stating my qualifications and the employment history for your reference. I am currently working as the RE for the Proposed Erection of a 7- Storey Commercial/Institution at 2nd & 7th Storeys, Commercial at 3rd, 4th , 5th and 6th Storeys & Car park lots at Basement 1 at Lorong 18 Geylang ( Geylang Planning area ) -  Hakka Association new Headquarter..
 
 I Graduated in 1995 from The University of Aberdeen, UK with a B.Eng ( Hons ) in Civil and Structural Engineering. Since then, I have been working for contractors for about 6 years as Site Engineer, Senior Engineer, and eventually as a Project Manager before joining developers and consultants for the position of Resident Engineer.
 
